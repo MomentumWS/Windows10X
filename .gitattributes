@@ -1,0 +1,1 @@
+config/*.xml -text whitespace=-trailing-space,cr-at-eol

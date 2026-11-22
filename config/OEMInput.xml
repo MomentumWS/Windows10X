@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Windows 10X / ModernPC 10.0.20279.1002 - 瀹炴満鏀归€犵増鏋勫缓杈撳叆
+  涓?Tools\ReferenceOEMInput.xml 鐨勫樊寮傦紙鍙湁 4 澶勶級锛?    1. DeviceLayoutType: GPT_SPACES_512 -> GPT        锛堢郴缁熻惤鍦ㄦ櫘閫?NTFS 鍒嗗尯锛屽彲缁存姢锛?    2. STORAGESPACES_LAYOUT -> LEGACY_GPT_LAYOUT      锛堜笌 GPT 甯冨眬閰嶅鐨?BCD 鍖咃級
+    3. 鏂板 WCOS_PNP_RUNTIMEDEVICEINSTALL             锛堝厑璁歌繍琛屾湡瑁呴┍鍔紝瀵瑰簲"濂楃敤鍘熺増椹卞姩"锛?    4. 鏂板 SKIP_INTERACTIVE_OOBE                     锛堥娆″惎鍔ㄨ烦杩囪仈缃?OOBE锛屼究浜庤皟璇曪級
+  娉ㄦ剰锛?    - WCOS_PNP_WINDOWS_UPDATEDRIVERS 铏界劧鍖呭瓨鍦紝浣嗘病鏈変换浣?FM 寮曠敤锛屽姞杩涙潵浼氭瀯寤哄け璐ワ紝鏁呬笉鍔犮€?    - imageapp.exe 蹇呴』浠ョ鐞嗗憳韬唤杩愯銆?-->
+<OEMInput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/embedded/2019/06/ImageUpdate">
+  <Description>ModernPC WCOSCDG - plain GPT layout for generic UEFI hardware (real PC)</Description>
+  <DeviceLayoutType>GPT</DeviceLayoutType>
+  <SV>Microsoft</SV>
+  <Device>GenericUEFIDevice</Device>
+  <ReleaseType>Test</ReleaseType>
+  <BuildType>fre</BuildType>
+  <Languages>
+    <Language Default="true">en-us</Language>
+    <!-- 闇€瑕佷腑鏂囩晫闈㈡椂鍐嶅姞锛?<Language>zh-cn</Language> -->
+  </Languages>
+  <AdditionalFMs>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\WindowsCoreProductionFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\WindowsCoreNonProductionFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\WindowsCoreInternalOnlyFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\ModernPCAppsFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\ModernPCSelfhostFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\ModernPCNonProductionFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\ModernPCProductSpecificFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\WCOSCDGFM.xml</AdditionalFM>
+    <AdditionalFM>D:\Win10X\Windows_10X_Build_Tools_1\Sources\FMfiles\GenericDeviceFM.xml</AdditionalFM>
+  </AdditionalFMs>
+  <Features>
+    <Microsoft>
+      <Feature>STATESEPARATION_ON</Feature>
+      <Feature>ALLOW_CONNECTEDSTANDBY</Feature>
+      <Feature>WCOS_ACCESSIBLITY_NARRATOR</Feature>
+      <Feature>WCOS_TIMESYNC_NETWORK</Feature>
+      <Feature>WCOS_TIMESYNC_NETWORK_WOW</Feature>
+      <Feature>WCOS_DISPLAY_ENHANCEMENT_SERVICE</Feature>
+      <Feature>WCOS_DEVICEPORTAL</Feature>
+      <Feature>WCOS_DEVICEPORTAL_WOW</Feature>
+      <Feature>WCOS_NET_CELLULAR_DATA</Feature>
+      <Feature>WCOS_NET_RADIO_MANAGEMENT</Feature>
+      <Feature>WCOS_FEEDBACKHUB_DXDIAG</Feature>
+      <Feature>WCOS_CLOUD_FILES</Feature>
+      <Feature>WCOS_XBOX_AUTHENTICATION</Feature>
+      <Feature>WCOS_AUDIO_MMESUPPORT</Feature>
+      <Feature>WCOS_SPEECH_VOICEAGENT_SUPPORT</Feature>
+      <Feature>WCOS_APP_WIN32SUPPORT_ARGON</Feature>
+      <Feature>WCOS_APP_CENTENNIALRUNTIME</Feature>
+      <Feature>WCOS_DIAGHOST_HOST</Feature>
+      <Feature>WCOS_EVENTLOG_SERVICE</Feature>
+      <Feature>WCOS_CONTAINERS</Feature>
+      <Feature>WCOS_MTP</Feature>
+      <Feature>WCOS_POWERSHELL</Feature>
+      <Feature>WCOS_OPENSSH_AUTOSTART</Feature>
+      <Feature>WCOS_DIAGNOSTICS_DTRACE</Feature>
+      <Feature>WCOS_TERMINAL_INTERNAL</Feature>
+      <Feature>CONTAINERHOST_TESTTOOLS</Feature>
+      <Feature>OFFLINE_CRASH_DUMP_ENABLED</Feature>
+      <Feature>CAD_CHARGING</Feature>
+      <Feature>TESTSIGNING_ON</Feature>
+      <Feature>KDSERIAL_ON</Feature>
+      <Feature>MODERNPC_POLICY</Feature>
+      <Feature>UEFI_HARDWARE</Feature>
+      <Feature>INPUT_COMPANION_COMPOSER</Feature>
+      <!-- ==== 鐩稿鍙傝€冭緭鍏ョ殑涓夊瀹炶川鏀瑰姩 ==== -->
+      <Feature>LEGACY_GPT_LAYOUT</Feature>
+      <Feature>WCOS_PNP_RUNTIMEDEVICEINSTALL</Feature>
+      <Feature>SKIP_INTERACTIVE_OOBE</Feature>
+    </Microsoft>
+  </Features>
+  <AppXOptionalPackages>
+    <AppXID>Microsoft.RemoteDesktop_8wekyb3d8bbwe</AppXID>
+    <AppXID>Microsoft.AV1VideoExtension_8wekyb3d8bbwe</AppXID>
+    <AppXID>Microsoft.HEVCVideoExtension_8wekyb3d8bbwe</AppXID>
+    <AppXID>Microsoft.OneConnect_8wekyb3d8bbwe</AppXID>
+    <AppXID>Microsoft.MPEG2VideoExtension_8wekyb3d8bbwe</AppXID>
+    <AppXID>Microsoft.Messaging_8wekyb3d8bbwe</AppXID>
+  </AppXOptionalPackages>
+  <Product>ModernPC</Product>
+</OEMInput>

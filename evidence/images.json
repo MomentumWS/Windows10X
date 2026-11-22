@@ -1,0 +1,42 @@
+{
+  "original": {
+    "filename": "Flash.vhdx",
+    "bytes": 5002756096,
+    "virtualBytes": 45097156608,
+    "sha256": "B60EAEAD78CFBB750BCCAC6A1D1B0D76D7CA316508C0C10419FC832D2823C2C3",
+    "hashUnchanged": true,
+    "partitions": [
+      {
+        "Name": "BS_EFIESP",
+        "GptType": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+        "Offset": 2097152,
+        "Size": 33554432
+      },
+      {
+        "Name": "OSPool",
+        "GptType": "e75caf8f-f680-4cee-afa3-b001e56efc2d",
+        "Offset": 35651584,
+        "Size": 45060456448
+      }
+    ],
+    "outerEspFiles": [
+      "EFI/Boot/BOOTX64.EFI"
+    ],
+    "bootManagerSha256": "41712377AF728E401722E8F66D29FC82D159F91D6C7C368C74DE87247A5216D7"
+  },
+  "preDebug": {
+    "filename": "FlashGPT-BCD-GPT-PreDebug.vhdx",
+    "sha256": "D4A486021E142D7F75B68A18EBC07B01D2FA2267E59F9B062A464B534D298E36",
+    "bytes": 3795845120,
+    "partitions": [
+      "EFIESP",
+      "MainOS",
+      "BSP",
+      "PreInstalled",
+      "OSData",
+      "Data"
+    ],
+    "allExpectedGuidBindingsPresent": true,
+    "kernelVersion": "10.0.20279.1002 (WinBuild.160101.0800)"
+  }
+}
